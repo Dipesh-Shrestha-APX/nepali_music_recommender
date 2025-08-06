@@ -20,13 +20,20 @@ The best performing model is served through a Dockerized FastAPI service.
   - Requires company email, which was unavailable.
 
 - **Data Gathering:**  
-  - Used ChatGPT and Grok to web scrape ~100–200 songs.  
+  - Used **ChatGPT and Grok** to web scrape ~100–200 songs.  
   - Augmented the rest of the dataset to reach 1,000 tracks.  
   - Main metadata stored in `sound.csv`.
 
 - **User Interaction Data:**  
-  - Created `user_liked_songs.csv` and `interaction.csv` using GPT-generated code.  
+  - Created `user_liked_songs.csv` and `interaction.csv` using **GPT-generated code**.  
   - These were based on predictions from the content-based model for similar tracks.
+
+> **⚠️ Note on GPT and Grok Usage:**  
+> Throughout the project, **ChatGPT and Grok** were extensively used for:  
+> - Web scraping and data augmentation  
+> - Writing model training, evaluation, and prediction code  
+> - Developing API endpoints and evaluation metric scripts  
+> These AI tools significantly accelerated development and experimentation.
 
 ---
 
