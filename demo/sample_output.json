@@ -1,0 +1,92 @@
+{
+  "input_track": "Kutu Ma Kutu",
+  "recommendations": {
+    "content_based": [
+      {
+        "title": "Zha Zhal Ko",
+        "score": 0.6869
+      },
+      {
+        "title": "Gojima Daam Chaina",
+        "score": 0.5512
+      },
+      {
+        "title": "Phul Butte Sari",
+        "score": 0.5394
+      },
+      {
+        "title": "Surke Thaili Khai",
+        "score": 0.5235
+      },
+      {
+        "title": "Dashain Ko Geet",
+        "score": 0.3661
+      },
+      {
+        "title": "Dashain Aayo",
+        "score": 0.3661
+      },
+      {
+        "title": "Tihar Aayo",
+        "score": 0.3661
+      },
+      {
+        "title": "Dherai Geet",
+        "score": 0.3545
+      },
+      {
+        "title": "Timro Muskan 2",
+        "score": 0.3467
+      },
+      {
+        "title": "Timro Muskan Ko Dhoon",
+        "score": 0.3467
+      }
+    ],
+    "collaborative_based": {
+      "user_id": "User_30",
+      "recommendations": [
+        {
+          "track_name": "Dilko Raat",
+          "artist_name": "Ramesh Limbu"
+        },
+        {
+          "track_name": "Desh Ko Geet",
+          "artist_name": "Yodda"
+        },
+        {
+          "track_name": "Jhilmil Tara",
+          "artist_name": "Laxmi Thapa"
+        },
+        {
+          "track_name": "Allare",
+          "artist_name": "Deepak Bajracharya"
+        },
+        {
+          "track_name": "Fulai Ful Dinchhu Ki",
+          "artist_name": "Shiva Pariyar"
+        },
+        {
+          "track_name": "Bhettinu Chuttinu",
+          "artist_name": "Aruna Lama"
+        },
+        {
+          "track_name": "Sundar Sapana",
+          "artist_name": "Krishna Yadav"
+        },
+        {
+          "track_name": "Geet Haru",
+          "artist_name": "Samir Shrestha"
+        },
+        {
+          "track_name": "Ma Prem Ma",
+          "artist_name": "Swoopna Suman"
+        },
+        {
+          "track_name": "Ma Roe Pani",
+          "artist_name": "Arun Thapa"
+        }
+      ]
+    }
+  }
+}

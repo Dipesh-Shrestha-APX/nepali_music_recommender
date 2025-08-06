@@ -1,0 +1,10 @@
+{
+  "content_based_model": {
+    "average_precision_at_10": 0.4295,
+    "mean_average_precision": 0.6634
+  },
+  "collaborative_based_model": {
+    "precision_at_10": 0.0775,
+    "mean_average_precision": 0.0075
+  }
+}
