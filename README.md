@@ -95,9 +95,6 @@ The best performing model is served through a Dockerized FastAPI service.
   - Dockerizing an API service.  
   - Understanding differences between collaborative and content-based filtering.
 
-- The full project scope was **not completed** within the timeline.
+- The full project scope was **not completed** within the Perimeter of expectation I got to learn a lot though.
 
----
-
-## 📂 Project Structure (Example)
 
