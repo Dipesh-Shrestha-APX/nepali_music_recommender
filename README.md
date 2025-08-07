@@ -1,4 +1,18 @@
-# Nepali Music Recommender System
+# 🎵 Nepali Music Recommender System
+
+---
+
+## 📚 Table of Contents
+
+- [🎯 Project Overview](#-project-overview)
+- [📊 Data Collection and Preparation](#-data-collection-and-preparation)
+- [🎵 Content-Based Model](#-content-based-model)
+- [🔄 Collaborative Filtering Model](#-collaborative-filtering-model)
+- [📈 Evaluation Summary](#-evaluation-summary)
+- [🚀 API Development](#-api-development)
+- [🐳 Dockerization](#-dockerization)
+- [💡 Learnings & Reflections](#-learnings--reflections)
+- [🧪 How to Use the Recommender System](#-how-to-use-the-recommender-system)
 
 ---
 
@@ -28,7 +42,7 @@ The best performing model is served through a Dockerized FastAPI service.
   - Created `user_liked_songs.csv` and `interaction.csv` using **GPT-generated code**.  
   - These were based on predictions from the content-based model for similar tracks.
 
-> **⚠️ Note on GPT and Grok Usage:**  
+> ⚠️ **Note on GPT and Grok Usage:**  
 > Throughout the project, **ChatGPT and Grok** were extensively used for:  
 > - Web scraping and data augmentation  
 > - Writing model training, evaluation, and prediction code  
@@ -59,23 +73,23 @@ The best performing model is served through a Dockerized FastAPI service.
 
 ## 📈 Evaluation Summary
 
-| Model                 | Precision@10 | Mean Average Precision (MAP) |
-|-----------------------|--------------|------------------------------|
+| Model                  | Precision@10 | Mean Average Precision (MAP) |
+|------------------------|--------------|------------------------------|
 | Content-Based Model    | Good values  | Good values                  |
 | Collaborative Model    | Low values   | Low values                   |
 
-> **Insight:** Content-based filtering performed significantly better.
+> ✅ **Insight:** Content-based filtering performed significantly better.
 
 ---
 
 ## 🚀 API Development
 
-- Built API endpoints using **FastAPI** with ChatGPT/Grok assistance:  
-  - `/recommend_collab` — Top 10 tracks based on user history.  
+- Built API endpoints using **FastAPI** with ChatGPT/Grok assistance:
+  - `/recommend_collab` — Top 10 tracks based on user history.
   - `/recommend_content` — Top 10 similar tracks based on a given track.
 
-- Could not implement the RESTful endpoints:  
-  - `/recommend/{user_id}`  
+- Could not implement the RESTful endpoints:
+  - `/recommend/{user_id}`
   - `/similar/{track_id}`
 
 ---
@@ -90,11 +104,66 @@ The best performing model is served through a Dockerized FastAPI service.
 
 ## 💡 Learnings & Reflections
 
-- Gained practical experience with:  
-  - Building and deploying APIs.  
-  - Dockerizing an API service.  
+- Gained practical experience with:
+  - Building and deploying APIs.
+  - Dockerizing an API service.
   - Understanding differences between collaborative and content-based filtering.
 
-- The full project scope was **not completed** within the Perimeter of expectation I got to learn a lot though.
+- The full project scope was **not completed**, but the experience provided valuable learning opportunities in applied machine learning and MLOps.
 
+---
 
+## 🧪 How to Use the Recommender System
+
+### 📦 Step 1: Build & Run the Docker Container
+
+```bash
+docker build -t nepali-music-recommender .
+docker run -p 8000:8000 nepali-music-recommender
+```
+
+### 🌐 Step 2: Access the API Endpoints
+
+---
+
+### 🔁 Content-Based Recommendation
+
+Get similar tracks based on a song title.
+
+#### 🔹 Endpoint Syntax
+
+```
+GET /recommend_content/?title=<SONG_TITLE>&top_n=<NUMBER_OF_RESULTS>
+```
+
+#### ✅ Example
+
+```
+http://localhost:8000/recommend_content/?title=Kutu%20Ma%20Kutu&top_n=5
+```
+
+This returns the top 5 songs similar to **"Kutu Ma Kutu"** based on metadata and cosine similarity.
+
+---
+
+### 👤 Collaborative Filtering Recommendation
+
+Get personalized recommendations based on user interaction history.
+
+#### 🔹 Endpoint Syntax
+
+```
+GET /recommend_collab/?user_id=<USER_ID>&top_n=<NUMBER_OF_RESULTS>
+```
+
+#### ✅ Example
+
+```
+http://localhost:8000/recommend_collab/?user_id=User_30&top_n=10
+```
+
+This returns the top 10 recommended songs for **User_30** based on their past listening history using the ALS model.
+
+> 🧠 You can test the API with tools like Postman, browser, or `requests.get()` in Python.
+
+---
